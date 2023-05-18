@@ -28,13 +28,13 @@ const Home = () => {
       return;
     }
     if (valorBit === "Real") {
-      const amountInBRL = parseFloat(cotacaoBit) * parseFloat(quantidadeBit) * 4.84;
+      const amountInBRL = parseFloat(cotacaoBit) * parseFloat(quantidadeBit);
       setValorConverter(amountInBRL.toFixed(2));
       setTxt("Reais");
       return;
     } else {
       const amountInUSD =
-        (parseFloat(cotacaoBit) * parseFloat(quantidadeBit)) / 4.84;
+        (parseFloat(cotacaoBit) * parseFloat(quantidadeBit));
       setValorConverter(amountInUSD.toFixed(2));
       setTxt("Dolares");
     }
